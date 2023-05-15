@@ -20,6 +20,25 @@ public class LinkedList {
     }
 
     /**
+     * This method is for insert element at any position
+     */
+    public void insertAt(int data, int pos) {
+        Node insertNode = new Node(data);
+        // if list is empty
+        if (head == null) {
+            head = new Node(data);
+            return;
+        }
+        Node previousNode = head;
+        for (int i = 0; i < pos - 1; i++) {
+            previousNode = previousNode.next;
+        }
+        insertNode.next = previousNode.next;
+        previousNode.next = insertNode;
+
+    }
+
+    /**
      * This method is for print linkedList
      */
     public void printLinkedList(){
