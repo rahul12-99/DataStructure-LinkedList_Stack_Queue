@@ -4,16 +4,19 @@ public class LinkedList {
     Node head;
 
     /**
-     * This method is for addNode data followed by the next pointer
+     * This method is for appending the LinkedList
      */
-    public void addFirst(int data){
+    public void append(int data){
         Node newNode = new Node(data);
         if (head == null){
             head = newNode;
             return;
         }
-        newNode.next = head;
-        head = newNode;
+        Node currentNode = head;
+        while (currentNode.next != null){
+            currentNode = currentNode.next;
+        }
+        currentNode.next = newNode;
     }
 
     /**
