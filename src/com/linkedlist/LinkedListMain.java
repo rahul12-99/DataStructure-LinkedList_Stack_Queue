@@ -7,11 +7,12 @@ public class LinkedListMain {
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList();
         linkedList.append(56);
+        linkedList.append(30);
         linkedList.append(70);
-        // Printing linkedList before inserting element
+        // Printing linkedList before deleting element
         linkedList.printLinkedList();
-        linkedList.insertAt(30,1);
-        // Printing linkedList after inserting element
+        linkedList.deleteFirst();
+        // Printing linkedList after deleting element
         linkedList.printLinkedList();
     }
 }

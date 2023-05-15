@@ -20,22 +20,15 @@ public class LinkedList {
     }
 
     /**
-     * This method is for insert element at any position
+     * This method is for delete first element form linkedList (Pop Method)
      */
-    public void insertAt(int data, int pos) {
-        Node insertNode = new Node(data);
-        // if list is empty
-        if (head == null) {
-            head = new Node(data);
-            return;
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("Linked list is empty");
+        }else {
+            Node temp = head;
+            head = temp.next;
         }
-        Node previousNode = head;
-        for (int i = 0; i < pos - 1; i++) {
-            previousNode = previousNode.next;
-        }
-        insertNode.next = previousNode.next;
-        previousNode.next = insertNode;
-
     }
 
     /**
