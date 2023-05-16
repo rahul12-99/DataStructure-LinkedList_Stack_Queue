@@ -11,7 +11,7 @@ public class LinkedListMain {
         linkedList.append(70);
         // Printing linkedList before deleting element
         linkedList.printLinkedList();
-        linkedList.deleteFirst();
+        linkedList.deleteLast();
         // Printing linkedList after deleting element
         linkedList.printLinkedList();
     }

@@ -20,15 +20,23 @@ public class LinkedList {
     }
 
     /**
-     * This method is for delete first element form linkedList (Pop Method)
+     * This method is for delete last element form linkedList (Pop last Method)
      */
-    public void deleteFirst(){
+    public void deleteLast(){
         if(head == null){
             System.out.println("Linked list is empty");
-        }else {
-            Node temp = head;
-            head = temp.next;
+            return;
+        } if(head.next == null){
+            head = null;
+            return;
         }
+        Node secondNode = head;
+        Node lastNode = head.next;
+        while (lastNode.next != null){
+            lastNode = lastNode.next;
+            secondNode = secondNode.next;
+        }
+        secondNode.next = null;
     }
 
     /**
