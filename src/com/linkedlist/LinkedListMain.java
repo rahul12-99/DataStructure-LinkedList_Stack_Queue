@@ -6,13 +6,9 @@ public class LinkedListMain {
      */
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList();
-        linkedList.append(56);
-        linkedList.append(30);
-        linkedList.append(70);
-        // Printing linkedList before delete the element
-        linkedList.printLinkedList();
-        linkedList.deleteAfterAnyNode(56);
-        // Printing LinkedList after delete the element
+        linkedList.insertInAscending(56);
+        linkedList.insertInAscending(30);
+        linkedList.insertInAscending(70);
         linkedList.printLinkedList();
     }
 }
