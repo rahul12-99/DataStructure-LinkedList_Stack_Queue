@@ -20,21 +20,25 @@ public class LinkedList {
     }
 
     /**
-     * This method is for search element on linkedList
+     * This method is for delete element on linkedList using keys
      */
-    public void insertAfterAnyNode(int data, int pos) {
-        Node insertNode = new Node(data);
-        // if list is empty
-        if (head == null) {
-            head = new Node(data);
+    public void deleteAfterAnyNode(int key) {
+        Node temp = head;
+        Node previous = head;
+        if (temp == null){
+            System.out.println("List is empty: ");
             return;
         }
-        Node previousNode = head;
-        for (int i = 0; i < pos - 1; i++) {
-            previousNode = previousNode.next;
+        if (temp.data == key){
+            head = temp.next;
+            return;
         }
-        insertNode.next = previousNode.next;
-        previousNode.next = insertNode;
+        while (temp != null && temp.data != key){
+            previous = temp;
+            temp = temp.next;
+        }
+        assert temp != null;
+        previous.next = temp.next;
 
     }
 
