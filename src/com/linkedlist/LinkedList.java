@@ -20,24 +20,26 @@ public class LinkedList {
     }
 
     /**
-     * This method is for delete last element form linkedList (Pop last Method)
+     * This method is for search element on linkedList
      */
-    public void deleteLast(){
+
+    public int search(int element){
+        int index = 0;
+        Node current = head;
         if(head == null){
-            System.out.println("Linked list is empty");
-            return;
-        } if(head.next == null){
-            head = null;
-            return;
+            System.out.println("List is empty: ");
+            return -1;
         }
-        Node secondNode = head;
-        Node lastNode = head.next;
-        while (lastNode.next != null){
-            lastNode = lastNode.next;
-            secondNode = secondNode.next;
+        while (current != null){
+            if (current.data == element){
+                return index;
+            }
+            index++;
+            current = current.next;
         }
-        secondNode.next = null;
+        return -1;
     }
+
 
     /**
      * This method is for print linkedList
